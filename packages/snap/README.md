@@ -1,8 +1,12 @@
-# TypeScript Example Snap
+# Phoenix Guard Metamask Snap
 
-This Snap demonstrates how to develop a Snap with TypeScript.
+This Snap is guarding you from burning your tokens by mistake.
+It has a list of addresses which are marked as not safe to send funds - those are invalid addresses (like 0x0) or contracts which doesn't implement any kind of withdrawing possibility.
 
-## Notes
+If snap recognizes receiving address as burn address user will be informed with following alert message:
+<br>
+**ALERT: This transaction is sending funds to a burn address!!!**
+<br>
 
-- Babel is used for transpiling TypeScript to JavaScript, so when building with the CLI,
-  `transpilationMode` must be set to `localOnly` (default) or `localAndDeps`.
+If snap does not recognize receiving address as burn address user will be informed with following message:
+<br>**We didn't recognize this transaction as burning transaction**
